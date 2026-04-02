@@ -21,12 +21,11 @@ function App() {
       },
     });
     setPosts(responce.data.posts);
-    console.log(responce.data.posts);
   };
 
   useEffect(() => {
     featchPosts();
-  }, []);
+  }, [auth]);
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
