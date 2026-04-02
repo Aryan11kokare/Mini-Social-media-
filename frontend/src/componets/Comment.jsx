@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./comment.css";
+import "./Comment.css";
 import { clientServer } from "../config";
 
 const CommentSection = ({ commentsData = [], currentUser = "You", postId }) => {
