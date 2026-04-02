@@ -1,0 +1,102 @@
+.bottom-navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--card-bg);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem 0.5rem calc(0.5rem + env(safe-area-inset-bottom));
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+}
+
+.nav-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  color: var(--text-secondary);
+  transition: all 0.2s;
+  position: relative;
+  flex: 1;
+  gap: 0.25rem;
+}
+
+.nav-btn:hover:not(.fab-btn) {
+  color: var(--primary-color);
+}
+
+.nav-btn svg {
+  transition: transform 0.2s;
+}
+
+.nav-btn:hover svg {
+  transform: scale(1.1);
+}
+
+.nav-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-top: 0.125rem;
+}
+
+.nav-label.active {
+  color: var(--primary-color);
+}
+
+.fab-btn {
+  position: relative;
+  margin-top: -2.5rem;
+}
+
+.fab {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color), #1976d2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 4px 16px rgba(33, 150, 243, 0.4);
+  transition: all 0.2s;
+  margin-bottom: 0.25rem;
+}
+
+.fab-btn:hover .fab {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(33, 150, 243, 0.5);
+}
+
+@media (min-width: 768px) {
+  .bottom-navbar {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-label {
+    font-size: 0.6875rem;
+  }
+
+  .fab {
+    width: 52px;
+    height: 52px;
+  }
+
+  .fab svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .nav-btn svg {
+    width: 22px;
+    height: 22px;
+  }
+}

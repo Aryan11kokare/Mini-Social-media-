@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  padding-bottom: 80px;
+}
+
+.main-content {
+  width: 100%;
+}
+
+.container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.posts-feed {
+  margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  .app {
+    padding-bottom: 2rem;
+  }
+
+  .container {
+    padding: 1.5rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0.75rem;
+  }
+
+  .app {
+    padding-bottom: 70px;
+  }
+}
